@@ -12,9 +12,9 @@ Route::get('/', function () {
 
 
 Route::post('/home', [RegisterController::class, 'home']);
-Route::post('/about', [RegisterController::class, 'home']);
-Route::post('/contact', [RegisterController::class, 'home']);
-Route::post('/chat', [RegisterController::class, 'home']);
+Route::post('/about', [RegisterController::class, 'about']);
+Route::post('/contact', [RegisterController::class, 'contact']);
+Route::post('/chat', [RegisterController::class, 'chat']);
 
-Route::get('/register', [RegisterController::class, 'showRegistrationForm'])->name('register');
+Route::post('/register', [RegisterController::class, 'showRegistrationForm'])->name('register');
 Route::post('/register', [RegisterController::class, 'register']);
